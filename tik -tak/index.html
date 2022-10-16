@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tik-tak-toe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+
+</head>
+
+<body>
+    
+
+        <div id="main" class="main-1">
+
+            <div id="icon">
+                <img id="icon-vol"
+                src="./media/vol-off.png" alt="">
+                <button type="img"></button>
+            </div>
+
+            <audio id="aud" autoplay></audio>
+
+
+            <div id="row1">
+
+                <button class="row1-left" id="box-btn" onclick="fun(this);"></button>
+                <button class="row1-mid" id="box-btn" onclick="fun(this);"></button>
+                <button class="row1-right" id="box-btn" onclick="fun(this);"></button>
+
+
+
+                <button class="row2-left" id="box-btn" onclick="fun(this);"></button>
+                <button class="row2-mid" id="box-btn" onclick="fun(this);"></button>
+                <button class="row2-right" id="box-btn" onclick="fun(this);"></button>
+
+
+
+
+                <button class="row3-left" id="box-btn" onclick="fun(this);"></button>
+                <button class="row3-mid" id="box-btn" onclick="fun(this);"></button>
+                <button class="row3-right" id="box-btn" onclick="fun(this);"></button>
+
+
+            </div>
+
+            <div id="player">
+
+                <section>
+                    <h4>Player 1</h4>
+                    <button id="p1">O</button>
+                </section>
+
+                <section>
+                    <h4>Player 2</h4>
+                    <button id="p2">X</button>
+                </section>
+
+            </div>
+
+
+            <input id="reset" type="button" onclick="instant_reset()" value="Reset">
+
+
+            <div class="tran" id="display_result">
+
+                Tic-Tac-Toe
+
+            </div>
+
+
+            <div id="timer"><br>
+
+                <b>Player-1</b> have to
+                Select the Box and <br>Make his First move To Start <br>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+</body>
+
+</html>

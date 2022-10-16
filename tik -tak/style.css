@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    /* position: relative !important; */
+    border-radius: 5px;
+    text-align: center;
+}
+#left{
+    margin: 0;
+    padding: 0;
+}
+#icon{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    
+
+}
+#icon-vol{
+   
+    width: 30px;
+    height: 30px;
+    background-color: rgb(189, 187, 192);
+    cursor: pointer;
+    
+}
+
+body {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://wallpaperaccess.com/full/2830695.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+#main{
+    
+    width: 50vh;
+    height: 100vh;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(https://phoneky.co.uk/thumbs/screensavers/down/fantasy/night_skc6v6v1.gif) no-repeat ;
+    background-size: cover;
+    background-position: center;
+
+    position: fixed;
+
+    box-shadow: 2px 2px 60px black;
+    
+    
+}
+
+
+#display_result{
+
+    margin-top: 15%;
+    padding: 20px;
+  
+    color: #000000;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgb(241, 233, 255);
+    transition: 2s;
+
+}
+#timer{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family:sans-serif;
+}
+#row1{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+#player{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#p1,#p2{
+   margin: 10px;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   
+}
+#tic-tak{
+    margin-bottom: 10px;
+    color: rgb(236, 12, 187);
+}
+h4{
+    color: aliceblue;
+    font-size: large;
+    font-family: sans-serif;
+}
+section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#root{
+    display: flex;
+}
+
+#btn{
+    width: 150px;
+    height: 150px;
+}
+#box-btn{
+    width:  65px;
+    height: 65px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+#reset{
+
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+
+}
+
+
+#timer{
+    color: #FFECEF;
+}
+
+/*model contanint */
+
+    
+#res{
+    background: #fff;
+    width: 90%;
+    max-width: 100%;
+    height: 20%;
+    display: none;
+}
+
+
+
+
+/* border css logic */
+
+
+
+.row1-left{
+    border-left: 0px;
+    border-top: 0px;
+}
+.row1-mid{
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+}
+.row1-right{
+    border-right: 0px;
+    border-top: 0px;
+}
+.row2-left{
+    /* border-right: 0px; */
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+
+.row2-mid{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px; 
+    border-bottom: 0px;  
+}
+.row2-right{
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+.row3-left{
+    border-left: 0px;
+    border-bottom: 0px;
+}
+
+.row3-mid{
+    border-left: 0px;
+    border-right: 0px; 
+    border-bottom: 0px;
+}
+.row3-right{
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
