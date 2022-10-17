@@ -14,10 +14,10 @@ let p2 = document.getElementById('p2');
 
 let music = document.getElementById('icon-vol');
 
-music.addEventListener('click',(e)=>{
+music.addEventListener('click',()=>{
 
     if(a_vol%2 ==  0){
-        aud.volume = 0.0;
+        aud.setAttribute('src','');
         music.setAttribute('src','./media/vol-off.png');
         a_vol++;
     }else{
@@ -46,9 +46,6 @@ function fun(a) {
                 p2.style.background = '#25316D';
                 p2.style.color = p1.style.color = '#FFFAE7'
                 count++;
-                if (count > 4) {
-                    win()
-                }
             }
 
         } else if (count % 2 != 0) {
@@ -62,15 +59,14 @@ function fun(a) {
                 p2.style.color = p1.style.color = '#FFFAE7'
                 
                 count++;
-                if (count > 4) {
-                    win()
-                }
+
             }
         }
+        win();
     }
 }
 
-let tt,p,flag = 0;
+let p,flag = 0;
 
 
 function reset() {
@@ -78,7 +74,6 @@ function reset() {
     
     let time = 10;
     
-    tt = setTimeout(() => {
         flag = 1;
         
         if(time == 10){
@@ -87,56 +82,34 @@ function reset() {
                timer.innerHTML = `Game Will auto reset in <h1>${time}</h1>for Instant reset click on reset button`;
 
                 time = time-1;
-                if(time < -1){
-                    btn.forEach((e) => {
-                        e.innerText = '';
-                        e.style.background = "";
-                        count = 0;
-                    })
-                    dis.innerHTML = `Try your Luck once again<br>
-                    All The Best`;
-                    dis.style.color = '#100720';
-                    dis.style.backgroundColor = "";
-                    timer.innerHTML = '';
-                    p2.style.background = '';
-                    p1.style.background = '';
-                    flag =0;
-                    // a_vol = 1;
-                    clearInterval(p);
-
+                if(time < -1){                 
+                    instant_reset();
                 }
-        
         
             },1000)
             
         }
-        
-
-    }, 0);
+    
 
 }
 function instant_reset() {
 
-    
-
     if(flag == 1){
         clearInterval(p);
-        clearTimeout(tt);
     }
     
     dis.innerHTML = `Try your Luck once again<br>
     All The Best`;
     dis.style.color = '#100720';
-    dis.style.backgroundColor = "";
-    timer.innerHTML = '';
-    p2.style.background = '';
-    p1.style.background = '';
+    dis.style.backgroundColor = timer.innerHTML = p2.style.background = p1.style.background = '';
+    p1.style.color = p2.style.color =  'black';
     
         
         btn.forEach((e) => {
             e.innerText = '';
             e.style.background = "";
             count = 0;
+            flag =0;
         });
 
 }
@@ -160,7 +133,7 @@ function win() {
         dis.style.color = '#FFFAE7';
         p2.style.background = '';
         p1.style.background = '';
-        reset();
+        reset();//auto reset with timer
 
     } else if (
         (btn[0].innerText == "X" && btn[1].innerText == 'X' && btn[2].innerText == 'X') ||
