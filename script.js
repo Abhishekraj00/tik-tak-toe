@@ -47,7 +47,9 @@ let music = document.getElementById('icon-vol');
 
 
 
-music.addEventListener('click',()=>{
+music.addEventListener('click',(e)=>{
+
+    e.stopPropagation();
 
     if(a_vol%2 ==  0){
         audio.volume = 0.0;
