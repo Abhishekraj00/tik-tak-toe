@@ -57,7 +57,7 @@ music.addEventListener('click',(e)=>{
         a_vol++;
     }else{
         a_vol++;
-        audio.volume = 0.1;
+        audio.volume = 1;
         music.setAttribute('src','./media/vol-on.png');
         audio.setAttribute('src','./media/game-sound.mp3');
     }
