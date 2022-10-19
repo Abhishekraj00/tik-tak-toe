@@ -41,9 +41,9 @@ let a_vol = 0;
 let audio = document.getElementById('aud');
 let music = document.getElementById('icon-vol');
 
-(()=>{
-    audio.volume = 0.1; 
-})();
+// (()=>{
+//     audio.volume = 0.1; 
+// })();
 
 
 
