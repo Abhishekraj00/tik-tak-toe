@@ -1,116 +1,165 @@
 
-let count = 0;
-let a_vol = 1;
 
-let aud = document.getElementById('aud');
-
+let display_result = document.getElementById('display_result');
 let btn = document.querySelectorAll('#box-btn');
-let dis = document.getElementById('display_result');
+
+
+
 let timer = document.getElementById('timer');
+let modal = document.getElementById('mod');
 
 
-let p1 = document.getElementById('p1');
-let p2 = document.getElementById('p2');
+let player_1 = document.getElementById('player-1');
+let player_2 = document.getElementById('player-2');
+let Draw = document.getElementById('drwa-game');
 
+let score_div  =document.querySelectorAll('.score-btn');
+let player_list = document.getElementById('player-list');
+
+
+let resetbtn = document.getElementById('reset');
+
+
+
+let p1_count = document.getElementById('p1-count');
+let p2_count = document.getElementById('p2-count');
+let draw_count = document.getElementById('drwa-count');
+
+
+let player_1_score = 0;
+let player_2_score = 0;
+let drwa_score = 0;
+       
+let count = 0;
+let a_vol = 0;
+
+
+
+
+
+
+let audio = document.getElementById('aud');
 let music = document.getElementById('icon-vol');
+
+(()=>{
+    audio.volume = 0.1; 
+})();
+
+
 
 music.addEventListener('click',()=>{
 
     if(a_vol%2 ==  0){
-        aud.setAttribute('src','');
+        audio.volume = 0.0;
         music.setAttribute('src','./media/vol-off.png');
         a_vol++;
     }else{
         a_vol++;
-        aud.volume = 0.1;
+        audio.volume = 0.1;
         music.setAttribute('src','./media/vol-on.png');
-        aud.setAttribute('src','./media/game-sound.mp3');
-       
+        audio.setAttribute('src','./media/game-sound.mp3');
     }
-    
 
 })
 
-
-
-
-
-function fun(a) {
+function fun(btn_value) {
     if (count <= 9) {
         if (count % 2 == 0) {
-            if (a.innerText == "") {
-                a.innerText = 'O';
-                a.style.background = "#790252";
-                a.style.color = "#FFFAE7";
-                p1.style.background = '';
-                p2.style.background = '#25316D';
-                p2.style.color = p1.style.color = '#FFFAE7'
+            if (btn_value.innerText == "") {
+
+                btn_value.innerText = 'O';
+
+                btn_value.style.background = "#790252";
+                btn_value.style.color = "#F5F5F5";
+
+                player_1.style.background = '#790252';
+                player_2.style.background = '';
+
+                player_list.style= 'border: 4px solid #790252;'
+
+
+                score_div[0].style.color =  score_div[1].style.color = '#F5F5F5'
+                score_div[2].style.color =  score_div[3].style.color = '#790252'
+                score_div[4].style.color =  score_div[5].style.color = '#790252'
+
                 count++;
+                if (count > 4) {
+                    win();
+                }
             }
 
         } else if (count % 2 != 0) {
-            if (a.innerText == "") {
-                a.innerText = 'X';
-                a.style.background = "#25316D";
-                a.style.color = "#FFFAE7";
+            if (btn_value.innerText == "") {
 
-                p2.style.background = '';
-                p1.style.background = '#790252';
-                p2.style.color = p1.style.color = '#FFFAE7'
+                btn_value.innerText = 'X';
+
+                btn_value.style.background = "#346751";
+                btn_value.style.color = "#F5F5F5";
+
+                player_1.style.background = '';
+                player_2.style.background = '#346751';
+
+                player_list.style= 'border: 4px solid #346751;'
+
+                score_div[0].style.color =  score_div[1].style.color = '#346751'
+                score_div[2].style.color =  score_div[3].style.color = '#F5F5F5'
+                score_div[4].style.color =  score_div[5].style.color = '#346751'
+
                 
                 count++;
-
+                if (count > 4) {
+                    win();
+                }
             }
         }
-        win();
     }
 }
 
-let p,flag = 0;
-
-
+let p = 0;
 function reset() {
 
     
-    let time = 10;
-    
-        flag = 1;
+    let time = 5;
         
-        if(time == 10){
+        if(time == 5){
             p = setInterval(()=>{
-
-               timer.innerHTML = `Game Will auto reset in <h1>${time}</h1>for Instant reset click on reset button`;
-
-                time = time-1;
-                if(time < -1){                 
-                    instant_reset();
-                }
-        
-            },1000)
-            
-        }
     
-
+                timer.innerHTML = `Auto reset in <h1>${time}</h1>for Instant reset click on reset button`;
+                timer.style.marginTop = '20px';
+    
+                time = time-1;
+                if(time < -1){
+                    
+                    instant_reset();
+                    
+    
+                }
+            
+            
+            },1000)
+                
+        }
 }
+
 function instant_reset() {
 
-    if(flag == 1){
-        clearInterval(p);
-    }
+    modal.classList.remove('modal');
+
+    clearInterval(p);  
     
-    dis.innerHTML = `Try your Luck once again<br>
-    All The Best`;
-    dis.style.color = '#100720';
-    dis.style.backgroundColor = timer.innerHTML = p2.style.background = p1.style.background = '';
-    p1.style.color = p2.style.color =  'black';
-    
-        
+    display_result.innerHTML = `Tic-Tac-Toe`;
+    display_result.style.color = '#F5F5F5';
+
+    timer.innerHTML = '';
+
         btn.forEach((e) => {
             e.innerText = '';
             e.style.background = "";
             count = 0;
-            flag =0;
         });
+
+    
+        return;    
 
 }
 
@@ -127,12 +176,19 @@ function win() {
         (btn[0].innerText == "O" && btn[4].innerText == 'O' && btn[8].innerText == 'O') ||
         (btn[2].innerText == "O" && btn[4].innerText == 'O' && btn[6].innerText == 'O')
     ) {
-        dis.innerHTML  = `<p> Player 1 Won the Game </p>`;
-        dis.style.backgroundColor = "#790252";
-        aud.setAttribute('src','./media/win-music.mp3');
-        dis.style.color = '#FFFAE7';
-        p2.style.background = '';
-        p1.style.background = '';
+        display_result.innerHTML  = `<p> Player 1 Won the Game </p>`;
+        modal.classList.toggle('modal');
+        display_result.style.backgroundColor = "#790252";
+        resetbtn.style = "border: 4px solid #790252;";
+        player_1_score++;
+        p1_count.innerText = player_1_score;
+        timer.style.color = '#790252'
+
+        audio.setAttribute('src','./media/win-music.mp3');
+        display_result.style.color = '#FFFAE7';
+        resetbtn.style.color = '#790252';
+        // p2.style.background = '';
+        // p1.style.background = '';
         reset();//auto reset with timer
 
     } else if (
@@ -145,27 +201,34 @@ function win() {
         (btn[0].innerText == "X" && btn[4].innerText == 'X' && btn[8].innerText == 'X') ||
         (btn[2].innerText == "X" && btn[4].innerText == 'X' && btn[6].innerText == 'X')
     ) {
-        dis.innerHTML  = `<p> Player 2 Won the Game </p>`;
-        aud.setAttribute('src','./media/win-music.mp3');
-        dis.style.backgroundColor = "#25316D";
-        dis.style.color = '#FFFAE7';
-        p2.style.background = '';
-        p1.style.background = '';
+        display_result.innerHTML  = `<p> Player 2 Won the Game </p>`;
+        modal.classList.toggle('modal');
+        audio.setAttribute('src','./media/win-music.mp3');
+        display_result.style.backgroundColor = "#346751";
+        resetbtn.style = "border: 4px solid #346751;";
+        display_result.style.color = '#F5F5F5';
+        resetbtn.style.color = '#346751';
+        timer.style.color = '#346751';
+
+        player_2_score++;
+        p2_count.innerText = player_2_score;
+        
         reset();
 
     }
     else if(count == 9){
 
-        dis.innerHTML  = `<p> Game Draw </p>`;
-        dis.style.backgroundColor = "#FF1E00";
-        p2.style.background = '';
-        p1.style.background = '';
+        display_result.innerHTML  = `<p> Game Draw </p>`;
+        modal.classList.toggle('modal');
+        display_result.style.backgroundColor = "#FF1E00";
+        drwa_score++;
+        drwa_score.innerText = drwa_score;
+        timer.style.color = '#FF1E00'
         reset();
 
     }
 
 }
-
 
 
 

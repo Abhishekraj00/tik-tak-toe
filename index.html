@@ -13,79 +13,103 @@
 </head>
 
 <body>
-    
-
-        <div id="main" class="main-1">
-
-            <div id="icon">
-                <img id="icon-vol"
-                src="./media/vol-off.png" alt="">
-                <button type="img"></button>
-            </div>
-
-            <audio id="aud" autoplay></audio>
 
 
-            <div id="row1">
-
-                <button class="row1-left" id="box-btn" onclick="fun(this);"></button>
-                <button class="row1-mid" id="box-btn" onclick="fun(this);"></button>
-                <button class="row1-right" id="box-btn" onclick="fun(this);"></button>
+    <div id="main" class="main-containre">
 
 
+        <div class="icon-box">
+            <img id="icon-vol" src="./media/vol-on.png" alt="icon">
 
-                <button class="row2-left" id="box-btn" onclick="fun(this);"></button>
-                <button class="row2-mid" id="box-btn" onclick="fun(this);"></button>
-                <button class="row2-right" id="box-btn" onclick="fun(this);"></button>
+            <audio  id="aud" src="./media/game-sound.mp3" autoplay></audio>
+        </div>
 
+        <div class="tran" id="display_result">
 
-
-
-                <button class="row3-left" id="box-btn" onclick="fun(this);"></button>
-                <button class="row3-mid" id="box-btn" onclick="fun(this);"></button>
-                <button class="row3-right" id="box-btn" onclick="fun(this);"></button>
-
-
-            </div>
-
-            <div id="player">
-
-                <section>
-                    <h4>Player 1</h4>
-                    <button id="p1">O</button>
-                </section>
-
-                <section>
-                    <h4>Player 2</h4>
-                    <button id="p2">X</button>
-                </section>
-
-            </div>
-
-
-            <input id="reset" type="button" onclick="instant_reset()" value="Reset">
-
-
-            <div class="tran" id="display_result">
-
-                Tic-Tac-Toe
-
-            </div>
-
-
-            <div id="timer"><br>
-
-                <b>Player-1</b> have to
-                Select the Box and <br>Make his First move To Start <br>
-
-
-
-            </div>
-
+            Tic-Tac-Toe
 
         </div>
 
 
+        
+
+        <div class="for-btn">
+            <div id="mod" class="mode">
+            <div id="row1" class="tic-toc-btn-container">
+
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+                <button id="box-btn" onclick="fun(this);"></button>
+
+
+            </div>
+            </div>
+
+            <div class="score-box">
+
+                <div id="player-list" class="player-list">
+
+                    <div id="player-1">
+                        <button id="p1 " class="score-btn p1-name">
+                            <h1>O </h1>Player_1
+                        </button>
+
+                        <button id="p1-count" class="score-btn s-data">
+                            <h2>0</h2>
+                        </button>
+                    </div>
+
+                    <div id="player-2">
+                        <button id="p2" class="score-btn p2-font">
+                            <h2>X</h2>Player_2
+                        </button>
+
+                        <button id="p2-count" class="score-btn p2-font">
+                            <h2>0</h2>
+                        </button>
+                    </div>
+
+                    <div id="drwa-game">
+                        <button id="draw" class="score-btn draw">Drwa Count</button>
+
+                        <button id="drwa-count" class="score-btn s-data">
+                            <h2>0</h2>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div><input id="reset" type="button" onclick="instant_reset()" value="Reset"></div>
+
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+        <div id="timer"><br>
+
+            <b>Player-1</b> have to
+            Select the Box and <br>Make his First move To Start <br>
+
+
+
+        </div>
+
+    </div>
 
 </body>
 
