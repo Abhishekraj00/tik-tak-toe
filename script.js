@@ -28,7 +28,7 @@ let draw_count = document.getElementById('drwa-count');
 
 let player_1_score = 0;
 let player_2_score = 0;
-let drwa_score = 0;
+let drwa_1 = 0;
        
 let count = 0;
 let a_vol = 0;
@@ -189,8 +189,6 @@ function win() {
         audio.setAttribute('src','./media/win-music.mp3');
         display_result.style.color = '#FFFAE7';
         resetbtn.style.color = '#790252';
-        // p2.style.background = '';
-        // p1.style.background = '';
         reset();//auto reset with timer
 
     } else if (
@@ -223,8 +221,8 @@ function win() {
         display_result.innerHTML  = `<p> Game Draw </p>`;
         modal.classList.toggle('modal');
         display_result.style.backgroundColor = "#FF1E00";
-        drwa_score++;
-        drwa_score.innerText = drwa_score;
+        drwa_1++;
+        draw_count.innerText = drwa_1;
         timer.style.color = '#FF1E00'
         reset();
 
