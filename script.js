@@ -1,4 +1,5 @@
 
+let boby = document.getElementsByTagName('body');
 
 let display_result = document.getElementById('display_result');
 let btn = document.querySelectorAll('#box-btn');
@@ -28,10 +29,10 @@ let draw_count = document.getElementById('drwa-count');
 
 let player_1_score = 0;
 let player_2_score = 0;
-let drwa_1 = 0;
+let d = 0;
        
 let count = 0;
-let a_vol = 0;
+
 
 
 
@@ -41,14 +42,15 @@ let a_vol = 0;
 let audio = document.getElementById('aud');
 let music = document.getElementById('icon-vol');
 
-// (()=>{
-//     audio.volume = 0.1; 
+// (()=>{    
+//     audio.setAttribute('src','./media/music.mp3');
 // })();
 
 
-
+let a_vol = 1;
 music.addEventListener('click',(e)=>{
 
+    
     e.stopPropagation();
 
     if(a_vol%2 ==  0){
@@ -59,23 +61,28 @@ music.addEventListener('click',(e)=>{
         a_vol++;
         audio.volume = 1;
         music.setAttribute('src','./media/vol-on.png');
-        audio.setAttribute('src','./media/game-sound.mp3');
+      
     }
 
 })
 
 function fun(btn_value) {
+
+    Draw.style.background = '';
+   
     if (count <= 9) {
         if (count % 2 == 0) {
             if (btn_value.innerText == "") {
 
                 btn_value.innerText = 'O';
-
+               
+                audio.setAttribute('src','./media/move.mp3');
                 btn_value.style.background = "#790252";
                 btn_value.style.color = "#F5F5F5";
 
                 player_1.style.background = '#790252';
                 player_2.style.background = '';
+
 
                 player_list.style= 'border: 4px solid #790252;'
 
@@ -94,7 +101,7 @@ function fun(btn_value) {
             if (btn_value.innerText == "") {
 
                 btn_value.innerText = 'X';
-
+                audio.setAttribute('src','./media/move.mp3');
                 btn_value.style.background = "#346751";
                 btn_value.style.color = "#F5F5F5";
 
@@ -180,15 +187,18 @@ function win() {
     ) {
         display_result.innerHTML  = `<p> Player 1 Won the Game </p>`;
         modal.classList.toggle('modal');
+
         display_result.style.backgroundColor = "#790252";
         resetbtn.style = "border: 4px solid #790252;";
         player_1_score++;
         p1_count.innerText = player_1_score;
         timer.style.color = '#790252'
 
-        audio.setAttribute('src','./media/win-music.mp3');
+        audio.setAttribute('src','./media/win.mp3');
+
         display_result.style.color = '#FFFAE7';
         resetbtn.style.color = '#790252';
+
         reset();//auto reset with timer
 
     } else if (
@@ -203,8 +213,9 @@ function win() {
     ) {
         display_result.innerHTML  = `<p> Player 2 Won the Game </p>`;
         modal.classList.toggle('modal');
-        audio.setAttribute('src','./media/win-music.mp3');
+        audio.setAttribute('src','./media/win.mp3');
         display_result.style.backgroundColor = "#346751";
+
         resetbtn.style = "border: 4px solid #346751;";
         display_result.style.color = '#F5F5F5';
         resetbtn.style.color = '#346751';
@@ -221,9 +232,27 @@ function win() {
         display_result.innerHTML  = `<p> Game Draw </p>`;
         modal.classList.toggle('modal');
         display_result.style.backgroundColor = "#FF1E00";
-        drwa_1++;
-        draw_count.innerText = drwa_1;
+        display_result.style.color = '#F5F5F5';
+        d++;
+        resetbtn.style = "border: 4px solid #FF1E00;";
+        resetbtn.style.color = '#FF1E00';
+        timer.style.color = '#FF1E00';
+        draw_count.innerText = d;
+        audio.setAttribute('src','./media/draw.mp3');
         timer.style.color = '#FF1E00'
+
+        player_list.style= 'border: 4px solid #FF1E00;'
+
+        score_div[0].style.color =  score_div[1].style.color = '#FF1E00'
+        score_div[2].style.color =  score_div[3].style.color = '#FF1E00'
+        score_div[4].style.color =  score_div[5].style.color = '#F5F5F5'
+
+        
+        Draw.style.background = '#FF1E00';
+
+        player_1.style.background = '';
+        player_2.style.background = '';
+
         reset();
 
     }
