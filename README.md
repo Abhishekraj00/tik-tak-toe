@@ -15,17 +15,17 @@
 <ol>
 
 <b>
-<li><a href="www.google.com">➤ About The Project </a></li>
-<li><a href="www.google.com">➤ Overview</li>
-<li><a href="www.google.com">➤ Project Files Description</li>
-<li><a href="www.google.com">➤ Getting Started</li>
-<li><a href="www.google.com">➤ Game Featcher</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-about-the-project">➤ About The Project </a></li>
+<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#%EF%B8%8F-overview)">➤ Overview</li>
+<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-project-files-description)">➤ Project Files Description</li>
+<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-getting-started)">➤ Getting Started</li>
+<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-game-featcher-)">➤ Game Featcher</li>
 <li><a href="www.google.com">➤ Scenario 1: Player 1 wins </li>
 <li><a href="www.google.com">➤ Scenario 2: Player 2 wins</li>
 <li><a href="www.google.com">➤ Scenario 3: Draw No one wins</li>
 <li><a href="www.google.com">➤ Special Mention</li>
 <li><a href="www.google.com">➤ Credits</li>
-<li><a href="www.google.com">➤ Hosted Link</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#--hosted-link-">➤ Hosted Link</li>
 </b>
 
 </ol>
