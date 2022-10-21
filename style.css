@@ -5,15 +5,12 @@
     text-align: center;
     cursor: pointer;
     font-family: sans-serif;
-
 }
 
-body {
-    
+body {    
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #icon-vol {
@@ -21,13 +18,13 @@ body {
     width: 30px;
     height: 30px;
 }
+
 .icon-box {
 
     margin-top: 20px;
     display: flex;
     justify-content: end;
     max-height: 50px;
-
 }
 
 #timer {
@@ -42,7 +39,6 @@ body {
     transition: 1s;
     border-radius: 50px;
     font-weight: bold;
-
 }
 
 #box-btn {
@@ -62,7 +58,6 @@ body {
 #reset{
 
     color: #790252;
-    /* background: #790252; */
     border: 3px solid #790252;
     font-size: xx-large;
     border-radius: 50px;
@@ -84,11 +79,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        max-width: 210px;
-        
-
-       
+        max-width: 210px;   
 
     }
 
@@ -402,12 +393,6 @@ body {
     }
 
 }
-
-
-
-
-
-
 
 .modal {
     display: none;
