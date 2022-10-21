@@ -16,15 +16,15 @@
 
 <b>
 <li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-about-the-project">➤ About The Project </a></li>
-<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#%EF%B8%8F-overview)">➤ Overview</li>
-<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-project-files-description)">➤ Project Files Description</li>
-<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-getting-started)">➤ Getting Started</li>
-<li><a href="[www.google.com](https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-game-featcher-)">➤ Game Featcher</li>
-<li><a href="www.google.com">➤ Scenario 1: Player 1 wins </li>
-<li><a href="www.google.com">➤ Scenario 2: Player 2 wins</li>
-<li><a href="www.google.com">➤ Scenario 3: Draw No one wins</li>
-<li><a href="www.google.com">➤ Special Mention</li>
-<li><a href="www.google.com">➤ Credits</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#%EF%B8%8F-overview">➤ Overview</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-project-files-description">➤ Project Files Description</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-getting-started">➤ Getting Started</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-game-featcher-">➤ Game Featcher</li>
+<li><a href="(https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-scenario-1-player-1-wins">➤ Scenario 1: Player 1 wins </li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-scenario-2-player-2-wins">➤ Scenario 2: Player 2 wins</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-scenario-3-game-draw-">➤ Scenario 3: Draw No one wins</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-special-mention-">➤ Special Mention</li>
+<li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#-credits-">➤ Credits</li>
 <li><a href="https://github.com/Abhishekraj00/tik-tak-toe/blob/master/README.md#--hosted-link-">➤ Hosted Link</li>
 </b>
 
