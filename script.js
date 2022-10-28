@@ -130,7 +130,7 @@ function reset() {
     
     let time = 5;
         
-        if(time == 5){
+        if(time == 1000){
             p = setInterval(()=>{
     
                 timer.innerHTML = `Auto reset in <h1>${time}</h1>for Instant reset click on reset button`;
