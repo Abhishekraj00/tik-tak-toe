@@ -310,7 +310,6 @@ body {
     display: grid;
     grid-template-rows: 3fr 1fr;
     gap: 50px;
-    margin-left: -200px;
   }
 
   .player-list {
