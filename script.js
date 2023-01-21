@@ -47,7 +47,7 @@ let music = document.getElementById('icon-vol');
 // })();
 
 
-let a_vol = 1;
+let a_vol = 0;
 music.addEventListener('click',(e)=>{
 
     
